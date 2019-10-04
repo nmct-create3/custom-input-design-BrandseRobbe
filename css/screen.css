@@ -86,6 +86,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (prefers-color-scheme:dark){
+  html{
+    
+  }
+}
 
 *,
 *:before,
@@ -718,6 +723,52 @@ input::placeholder {
   height: 22px;
   border-radius: 100%;
   background-color: var(--global-input-backgroundColor);
+  transition: all var(--global-transitionTiming-alpha);
+}
+.c-option--hidden:focus + .c-custom-toggle .c-custom-toggle__fake-input {
+  border: var(--global-borderWidth) solid var(--global-input-focus-borderColor);
+  box-shadow: var(--global-input-focus-boxShadow);
+}
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input {
+  justify-content: flex-end;
+  background-color: var(--global-color-alpha);
+}
+.c-option--hidden:active + .c-custom-toggle .c-custom-toggle__fake-input::after {
+  width: 30px;
+  border-radius: 24px;
+}
+
+/* component toggle list */
+
+.c-toggle-list__item {
+  margin-bottom: 12px;
+}
+.c-custom-toggle--inverted {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+.c-toggle-list__item + .c-toggle-list__item {
+  padding-top: 12px;
+  border-top: var(--global-borderWidth) solid var(--global-color-neutral-xxx-light);
+}
+
+/* component:  */
+.c-custom-select {
+  display: block;
+  position: relative;
+}
+.c-custom-select__input {
+  display: flex;
+}
+.c-custom-select__symbol {
+  width: 24px;
+  height: 24px;
+  fill: var(--global-color-neutral-x-light);
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
 
 /*
