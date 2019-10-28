@@ -872,6 +872,11 @@ input::placeholder {
   background-color: var(--global-color-alpha-dark);
   box-shadow: none;
 }
+.c-rating__symbol {
+  fill: yellow;
+  height: 100px;
+  width: 100px;
+}
 
 /*------------------------------------*\
 #UTILITIES
